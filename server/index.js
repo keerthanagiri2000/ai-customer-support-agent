@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 // Enable CORS to allow requests from frontend
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://customer-support-ai.netlify.app"],
     methods: ["POST", "GET", "PUT", "PATCH", "DELETE", "OPTIONS"],
   })
 );
