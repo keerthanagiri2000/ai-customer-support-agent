@@ -37,6 +37,10 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
+app.get("/", (req, res) => {
+  res.send("AI Customer Support Backend is running");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/chat", chatRoutes);
 
