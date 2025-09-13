@@ -18,7 +18,7 @@ export const sendMessage = async (req, res) => {
 
         if (aiContent && aiContent.content) {
             const aiResponse = await Chat.create({ userId, message: aiContent.content, role: "ai" });
-            return res.status(200).json({ userRequest, aiResponse });
+            return res.status(200).json({success: true, userRequest, aiResponse });
         }
 
         return res.status(400).json({
