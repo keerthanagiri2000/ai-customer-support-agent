@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { connectDb } from "./db.js";
 import authRoutes from "./routes/authRoutes.js";
+import chatRoutes from "./routes/chatRoutes.js";
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ connectDb();
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/chat", chatRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on ${PORT}`);
